@@ -95,6 +95,7 @@ class NoteProvider extends ChangeNotifier {
       _professionalList = _notesList.where((e) => e.category.toLowerCase().toString() == "professional").toList();
       _shoppingList = _notesList.where((e) => e.category.toLowerCase().toString() == "shopping").toList();
       notifyListeners();
+       setLoading(false);
 
 
       
@@ -104,6 +105,8 @@ class NoteProvider extends ChangeNotifier {
       notifyListeners();
       setLoading(false);
     }
+
+    setLoading(false);
   }
 
 
